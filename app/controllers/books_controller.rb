@@ -8,9 +8,11 @@ class BooksController < ApplicationController
   def create
     @book = Book.new(book_params)
     if @book.save
-      redirect_to book_path(@book.id), notice:  "Book was successfully created."
+      flash[:notice] = "Book was successfully created."
+      redirect_to book_path(@book.id)
     else
       @books = Book.all
+      flash.now[:alert] = "Book was unsuccessfully created."
       render :index
     end
   end
@@ -33,7 +35,7 @@ class BooksController < ApplicationController
     book = Book.find(params[:id])
     book.destroy
     redirect_to '/books'
-  
+
   end
 
   private
