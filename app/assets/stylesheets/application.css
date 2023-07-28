@@ -14,18 +14,11 @@
  *= require_self
  */
 
+/*共通のcss*/
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-a{
-  color: #000;
-}
-
-a:visited{
-  color: #666;
 }
 
 body{
@@ -34,13 +27,7 @@ body{
   font-size: 13px;
   line-height: 18px;
   margin: 33px;
-}
-
-h1{
-  display: block;
-  font-size: 2em;
-  margin: 17.42px 0;
-  font-weight: bold;
+  font-family: verdana, arial, helvetica, sans-serif;
 }
 
 strong{
@@ -52,6 +39,32 @@ p{
   line-height: 18px;
   margin: 33px;
 }
+
+a{
+  color: #000;
+}
+
+a:visited{
+  color: #666;
+}
+
+a:hover{
+  color: #fff;
+  background-color: #000;
+}
+
+h1{
+  display: block;
+  font-size: 2em;
+  margin: 17.42px 0;
+  font-weight: bold;
+}
+
+.flash-message{
+  color: green;
+}
+
+/*一覧ページ*/
 
 table{
   display: table;
@@ -79,7 +92,7 @@ th{
   vertical-align: inherit;
   font-weight: bold;
   text-align: center;
-  padding-bottom: 5px;
+  padding: 1px 1px 5px;
 }
 
 tbody{
@@ -89,9 +102,7 @@ tbody{
 }
 
 td{
-  padding-bottom: 7px;
-  padding-left: 5px;
-  padding-right: 5px;
+  padding: 1px 5px 7px;
 }
 
 .show.edit.destroy{
@@ -116,7 +127,46 @@ label{
   display: block;
 }
 
+#book_title{
+  padding: 1px 2px;
+}
+
+#book_body{
+  padding: 2px;
+}
+
 .actions{
   margin-bottom: 10px;
 }
 
+input[type="submit"]{
+   padding: 1px 6px;
+}
+
+
+#error_explanation{
+  width: 450px;
+  border: 2px solid #ff0000;
+  padding: 7px 7px 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#error_explanation h2{
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0;
+  background-color: #c00;
+  color: #fff;
+}
+
+ul{
+  display: block;
+  margin: 33px;
+  font-size: 13px;
+  line-height: 18px;
+  padding-left: 40px;
+}
